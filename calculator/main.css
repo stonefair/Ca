@@ -24,12 +24,17 @@
     transition: font-size 0.5s ease;
     font-size: 20px;
     margin-top: 5px;
+ 
+    
 
 }
 
 .number:hover, .operator:hover, .special:hover{
     background-color: coral;
     font-size: 25px;
+    /* просто експеремент з стилем аніміцаї */
+    animation: rotate 2s; 
+  
 
 }
 
@@ -41,6 +46,17 @@
 .special{
     background-color: blueviolet;
 }
+/* просто експеременти з css */
+@keyframes rotate{
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateX(360deg);
+    }
+}
+
+
 
 
 
