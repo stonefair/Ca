@@ -19,6 +19,7 @@ calculator.onclick = function(event) {
             operator = '';
             opernand = '';
             secondOpernand = '';
+            SecretDial.value = ''
             break;
 
         case "=": 
@@ -50,14 +51,16 @@ calculator.onclick = function(event) {
         case '0':
             if (operator === '') {
                 opernand += event.target.innerText;
+                dial.value += event.target.innerText;
             } else {
-                secondOpernand += event.target.innerText;
-                opernand = eval(opernand + operator + secondOpernand);
-                SecretDial.value = opernand;
-                operator = ''
+                secondOpernand = event.target.innerText;
+                dial.value += event.target.innerText;
+                opernand = eval(dial.value);
+                SecretDial.value = eval(dial.value);
                 secondOpernand = ''
             }
-            dial.value += event.target.innerText;
+            
+            
             break;
             
         case '/':
