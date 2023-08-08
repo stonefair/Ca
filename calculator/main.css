@@ -6,6 +6,7 @@
     flex-wrap: wrap;
     justify-content: center;
     border: solid 10px pink;
+    position: relative;
 
 }
 
@@ -33,7 +34,7 @@
     background-color: coral;
     font-size: 25px;
     /* просто експеремент з стилем аніміцаї */
-    animation: rotate 2s; 
+    /* animation: rotate 2s;  */
   
 
 }
@@ -54,6 +55,18 @@
     to {
         transform: rotateX(360deg);
     }
+}
+
+
+.numberFieldSecond{
+    width: 95%;
+    height: 30px;
+    font-size: 15px;
+    color: rgb(141, 143, 145);
+    background-color: black;
+    position: absolute;
+    top: 70px;
+    text-align: right;
 }
 
 
