@@ -57,10 +57,8 @@ calculator.onclick = function(event) {
                 dial.value += event.target.innerText;
                 opernand = eval(dial.value);
                 SecretDial.value = eval(dial.value);
-                secondOpernand = ''
+                secondOpernand = '';
             }
-            
-            
             break;
             
         case '/':
@@ -76,3 +74,31 @@ calculator.onclick = function(event) {
         //     dial.value += event.target.innerText;
     }
 };
+
+calculator.onkeydown = function (event){
+    let key = event.key;
+    if (/^\d$/.test(key) ) {
+        if (operator === '') {
+            opernand += key
+            dial.value = opernand;
+        }  else {
+            secondOpernand += key;
+            dial.value += secondOpernand;
+            opernand = eval(dial.value);
+            SecretDial.value = eval(dial.value);
+            secondOpernand = '';
+        }
+      } else if (/^[+\-*/]$/.test(key)){
+        console.log('1')
+        operator = key;
+        dial.value += operator;
+    } else if (/^[=]$/.test(key) || event.keyCode === 13) {
+        dial.value = eval(dial.value);
+        opernand = eval(dial.value);
+        SecretDial.value = '';
+
+    }
+    
+}
+
+dial.focus();
