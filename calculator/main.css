@@ -59,14 +59,16 @@
 
 
 .numberFieldSecond{
-    width: 95%;
+    width: 75%;
     height: 30px;
     font-size: 15px;
     color: rgb(141, 143, 145);
     background-color: black;
     position: absolute;
     top: 70px;
+    right: 5px;
     text-align: right;
+    border: none;
 }
 
 
